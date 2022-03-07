@@ -74,8 +74,8 @@ ctx.fillStyle = gradient;
 function Image() { /*this is the function for the image adapted from the W3 tutorial*/
   var c = document.getElementById("a");
   var ctx = c.getContext("2d");
-  var img = document.getElementById("scream");
-  ctx.drawImage(img,10,10);
+  var img = document.getElementById("Thumbs up");
+  ctx.drawImage(img,0,0);
 }
 
 function Clear() { /*this is the function that allows for the clear button to clear the canvas*/
@@ -112,13 +112,14 @@ a_canvas.width = a_canvas.width;
 
 <body>
 
-<img id="scream" src="img_the_scream.jpg" alt="The Scream" width="220" height="277"> <!--this is the picture that will be added to the canvas when "Image() is executed-->
+<img id="Thumbs up" src="https://www.irishtimes.com/polopoly_fs/1.4473007.1612185073!/image/image.jpg_gen/derivatives/box_620_330/image.jpg" alt="Thumbs up" width="10" height="10"> <!--this is the picture that will be added to the canvas when "Image() is executed-->
+ 
+	<canvas id="a" width="500" height="400" style="border:1px dotted;float:left" onclick="draw_b();return 
+ 	false"></canvas>
 
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
 
-	
-    <canvas id="a" width="300" height="225" style="border:1px dotted;float:left" onclick="draw_b();return false"></canvas>
     
     <p class="legend right" style="margin-top:4em"><span class="arrow leftwardsSquiggleArrow"></span> <a href="#" 
 	onclick="draw_a();return false">Click to draw a rectangle</a></p> <!--This is the draw_a() function that makes a rectangle-->
