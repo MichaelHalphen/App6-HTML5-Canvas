@@ -71,6 +71,20 @@ ctx.fillStyle = gradient;
    }
 }}
 
+function Image() { /*this is the function for the image adapted from the W3 tutorial*/
+  var c = document.getElementById("a");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("scream");
+  ctx.drawImage(img,10,10);
+}
+
+function Clear() { /*this is the function that allows for the clear button to clear the canvas*/
+var a_canvas = document.getElementById("a");
+var a_context = a_canvas.getContext("2d");
+var a_canvas = document.getElementById("a");
+a_canvas.width = a_canvas.width;
+}
+
 </script>
 
 
@@ -93,9 +107,13 @@ ctx.fillStyle = gradient;
     left: 0vw;
     z-index: 1;
 }
+
 </style>
 
 <body>
+
+<img id="scream" src="img_the_scream.jpg" alt="The Scream" width="220" height="277"> <!--this is the picture that will be added to the canvas when "Image() is executed-->
+
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
 
@@ -107,6 +125,12 @@ ctx.fillStyle = gradient;
     
     <p class="legend right" style="margin-top:4em"><span class="arrow leftwardsSquiggleArrow"></span> <a href="#" 
 	onclick="fillText()">Click to add my name</a></p>  <!--This is the fillText() function that makes text in the canvas-->
+    
+    <p class="legend right" style="margin-top:4em"><span class="arrow leftwardsSquiggleArrow"></span> <a href="#" 
+	onclick="Image()">Click to add a picture</a></p>  <!--This is the Image() function that makes text in the canvas-->
+    
+     <p class="legend right" style="margin-top:4em"><span class="arrow leftwardsSquiggleArrow"></span> <a href="#" 
+	onclick="Clear()">Click to clear</a></p>  <!--This is the Clear() function that calls back to my clear function and clears the canvas-->
 </div>
 
 <div id="content" class="w3-container">
