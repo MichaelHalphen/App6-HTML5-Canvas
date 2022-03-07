@@ -41,6 +41,11 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 var a_canvas = document.getElementById("a"); /*this sets up "a" as a variable that we can fetch in the future*/
 
+function draw_a() { /*this allows me to make a rectange upon pressing a button that has as its function draw_a()*/
+  var a_canvas = document.getElementById("a");
+  var a_context = a_canvas.getContext("2d");
+  a_context.fillRect(50, 25, 150, 100);
+}
 </script>
 
 
@@ -72,7 +77,8 @@ var a_canvas = document.getElementById("a"); /*this sets up "a" as a variable th
 	
     <canvas id="a" width="300" height="225" style="border:1px dotted;float:left" onclick="draw_b();return false"></canvas>
     
-    <p class="legend right" style="margin-top:4em"><span class="arrow leftwardsSquiggleArrow"></span> <a href="#" 					onclick="draw_b();return false">Click to draw on this canvas</a></p>
+    <p class="legend right" style="margin-top:4em"><span class="arrow leftwardsSquiggleArrow"></span> <a href="#" 
+	onclick="draw_a();return false">Click to draw on this canvas</a></p> <!--This is the draw_a() function that makes a rectangle-->
 </div>
 
 <div id="content" class="w3-container">
