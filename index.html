@@ -38,6 +38,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
+var a_canvas = document.getElementById("a"); /*this sets up "a" as a variable that we can fetch in the future*/
+
 </script>
 
 
@@ -65,14 +68,22 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
-</div>
+
 	
+    <canvas id="a" width="300" height="225" style="border:1px dotted;float:left" onclick="draw_b();return false"></canvas>
+    
+    <p class="legend right" style="margin-top:4em"><span class="arrow leftwardsSquiggleArrow"></span> <a href="#" 					onclick="draw_b();return false">Click to draw on this canvas</a></p>
+</div>
+
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
+	
+ <p2>Content goes here.</p2>
 		
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+	<p2>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p2>
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	<p2>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p2> 
+  
+</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
