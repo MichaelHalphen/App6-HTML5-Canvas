@@ -46,6 +46,31 @@ function draw_a() { /*this allows me to make a rectange upon pressing a button t
   var a_context = a_canvas.getContext("2d");
   a_context.fillRect(50, 25, 150, 100);
 }
+
+function fillText() { /*this code, adapted from the W3 tutorial allows me to write text within the canvas with a gradient on it.*/
+var canvas = document.getElementById("a");
+if (canvas.getContext) 
+{
+var ctx = canvas.getContext('2d');
+gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+// Add the colors with fixed stops at 25% of the width.  
+  
+gradient.addColorStop("0", "red"); 
+gradient.addColorStop(".25", "yellow");
+gradient.addColorStop(".50", "green");
+gradient.addColorStop(".75", "blue");
+gradient.addColorStop("1.0", "magenta");
+
+  // Use the gradient.
+ctx.font = "italic 700 25px Unknown Font, sans-serif";
+ctx.fillStyle = gradient;
+
+  for (var i = 0; i < 400; i += 50)
+   {
+      ctx.fillText("Michael Halphen", i, i); /*This is the imput for the text*/
+   }
+}}
+
 </script>
 
 
@@ -78,7 +103,10 @@ function draw_a() { /*this allows me to make a rectange upon pressing a button t
     <canvas id="a" width="300" height="225" style="border:1px dotted;float:left" onclick="draw_b();return false"></canvas>
     
     <p class="legend right" style="margin-top:4em"><span class="arrow leftwardsSquiggleArrow"></span> <a href="#" 
-	onclick="draw_a();return false">Click to draw on this canvas</a></p> <!--This is the draw_a() function that makes a rectangle-->
+	onclick="draw_a();return false">Click to draw a rectangle</a></p> <!--This is the draw_a() function that makes a rectangle-->
+    
+    <p class="legend right" style="margin-top:4em"><span class="arrow leftwardsSquiggleArrow"></span> <a href="#" 
+	onclick="fillText()">Click to add my name</a></p>  <!--This is the fillText() function that makes text in the canvas-->
 </div>
 
 <div id="content" class="w3-container">
